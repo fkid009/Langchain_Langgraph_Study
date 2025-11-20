@@ -1,0 +1,16 @@
+python-dotenv
+langchain
+langchain_core
+langchain_community
+langgraph
+langchain_openai
+ipykernel
+pytz
+py-zerox
+nest_asyncio
+unstructured[md]
+nltk
+markdown
+html2text
+beautifulsoup4
+langchain-chroma

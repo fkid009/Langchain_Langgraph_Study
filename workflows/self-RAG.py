@@ -58,10 +58,10 @@ rel_prompt = client.pull_prompt("langchain-ai/rag-document-relevance", include_m
 llm = ChatOpenAI(model=LLM_MODEL)
 
 rewrite_prompt = PromptTemplate.from_template(
-    """
+    f"""
     사용자의 질문을 보고, 우리의 사전을 참고해서 사용자의 질문을 변경해주세요.
-    사전: {dictionary}
-    질문: {query}
+    사전: {DICTIONARY}
+    질문: {{query}}
     """
 )
 

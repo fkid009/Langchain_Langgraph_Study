@@ -43,7 +43,7 @@ class AgentState(TypedDict):
 
 
 # 문서 검색 노드
-def retrieve_node(state: AgentState):
+def retrieve(state: AgentState):
     query = state["query"]
     docs = retriever.invoke(query)
     return {"context": docs}
@@ -73,7 +73,7 @@ def generate(state: AgentState):
 
 # 그래프 구성
 graph_builder = StateGraph(AgentState)
-graph_builder.add_node("retrieve", retrieve_node)
+graph_builder.add_node("retrieve", retrieve)
 graph_builder.add_node("generate", generate)
 
 graph_builder.add_edge(START, "retrieve")
